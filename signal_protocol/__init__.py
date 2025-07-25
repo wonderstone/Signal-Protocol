@@ -1,8 +1,1 @@
-"""Signal Protocol Implementation"""
-
-from . import keys
-
-
-__all__ = [
-    "keys",
-]
+# Empty __init__.py file for signal_protocol package

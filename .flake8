@@ -1,0 +1,28 @@
+[flake8]
+# 代码风格检查配置
+max-line-length = 88
+extend-ignore = 
+    # E203: whitespace before ':'
+    E203,
+    # W503: line break before binary operator
+    W503,
+    # E501: line too long (handled by black)
+    E501
+
+exclude = 
+    .git,
+    __pycache__,
+    .vscode,
+    .pytest_cache,
+    *.egg-info,
+    build,
+    dist
+
+per-file-ignores =
+    # 测试文件可以有更长的行
+    tests/*:E501
+    # __init__.py 文件可以为空
+    __init__.py:F401
+
+# 复杂度检查
+max-complexity = 10
